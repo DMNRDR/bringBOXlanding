@@ -20,12 +20,13 @@
     const observer=new IntersectionObserver((entries)=>{
       for(const entry of entries){
         if(entry.isIntersecting&&entry.intersectionRatio>=0.65){
+          svg.classList.add("bb-was-played");
           svg.classList.add("bb-play");
-          observer.disconnect();
-          break;
+        }else if(!entry.isIntersecting||entry.intersectionRatio<=0.2){
+          svg.classList.remove("bb-play");
         }
       }
-    },{threshold:[0.65],rootMargin:"-8% 0px -8% 0px"});
+    },{threshold:[0,0.2,0.65],rootMargin:"-8% 0px -8% 0px"});
     observer.observe(svg);
   };
   const scan=()=>document.querySelectorAll("svg.symbol-box").forEach(prepare);

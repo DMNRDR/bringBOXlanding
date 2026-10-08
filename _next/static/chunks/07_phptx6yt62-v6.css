@@ -7,7 +7,13 @@
 .symbol-box[data-bb-ready].bb-play .bb-flap{animation:bb-flaps-open .58s var(--ease-out-cubic) .48s forwards}
 .symbol-box[data-bb-ready].bb-play .bb-closed-lid{animation:bb-lid-open .5s var(--ease-out-cubic) .38s forwards}
 .symbol-box[data-bb-ready].bb-play .symbol[data-out=true]{animation:bb-symbol-pop .68s cubic-bezier(.34,1.56,.64,1) 1.08s forwards!important}
+.symbol-box[data-bb-ready].bb-was-played:not(.bb-play) .symbol{animation:bb-symbol-return .38s var(--ease-out-cubic) forwards!important}
+.symbol-box[data-bb-ready].bb-was-played:not(.bb-play) .bb-flap{animation:bb-flaps-close .5s var(--ease-out-cubic) .24s forwards}
+.symbol-box[data-bb-ready].bb-was-played:not(.bb-play) .bb-closed-lid{animation:bb-lid-close .48s var(--ease-out-cubic) .56s forwards}
 @keyframes bb-flaps-open{0%{opacity:0;transform:scaleY(.06)}100%{opacity:1;transform:scaleY(1)}}
 @keyframes bb-lid-open{0%{opacity:1;transform:scaleY(1)}75%{opacity:1;transform:scaleY(.08)}100%{opacity:0;transform:scaleY(.04)}}
 @keyframes bb-symbol-pop{0%{opacity:0;transform:translateY(var(--sink))}100%{opacity:1;transform:none}}
+@keyframes bb-symbol-return{0%{opacity:1;transform:none}100%{opacity:0;transform:translateY(var(--sink))}}
+@keyframes bb-flaps-close{0%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(.06)}}
+@keyframes bb-lid-close{0%{opacity:0;transform:scaleY(.04)}100%{opacity:1;transform:scaleY(1)}}
 @media (prefers-reduced-motion:reduce){.symbol-box[data-bb-ready] .bb-flap{opacity:1;transform:none}.symbol-box[data-bb-ready] .bb-closed-lid{display:none}.symbol-box[data-bb-ready] .symbol[data-out=true]{opacity:1!important;transform:none!important}}
