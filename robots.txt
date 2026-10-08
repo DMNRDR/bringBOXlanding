@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://dmnrdr.github.io/bringBOXlanding/sitemap.xml
