@@ -16,3 +16,16 @@
 @keyframes bb-flaps-close{0%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(.06)}}
 @keyframes bb-lid-close{0%{opacity:0;transform:scaleY(.04)}100%{opacity:1;transform:scaleY(1)}}
 @media (prefers-reduced-motion:reduce){.symbol-box[data-bb-ready] .bb-flap{opacity:1;transform:none}.symbol-box[data-bb-ready] .bb-closed-lid{display:none}.symbol-box[data-bb-ready] .symbol[data-out=true]{opacity:1!important;transform:none!important}}
+#how .bb-order-presentation{position:relative;display:block!important;width:100vw;max-width:none;margin-left:calc(50% - 50vw);padding:0;background:var(--color-ink);color:var(--color-paper)}
+.bb-order-stage{position:sticky;top:var(--nav-h);z-index:2;display:grid;height:calc(100svh - var(--nav-h));min-height:560px;overflow:hidden;background:var(--color-ink);padding:clamp(28px,5vw,64px);grid-template-rows:auto minmax(0,1fr);gap:18px}
+.bb-order-stage__copy{align-self:start;max-width:42rem}
+.bb-order-stage__step{color:var(--color-yellow);font-size:14px;font-weight:700}
+.bb-order-stage__title{margin-top:8px;font-family:var(--font-display);font-size:clamp(30px,8vw,52px);font-weight:900;font-stretch:112%;line-height:1;text-wrap:balance}
+.bb-order-stage__figure{display:flex;min-height:0;align-items:center;justify-content:center}
+.bb-order-stage__svg{display:block;width:min(78vw,440px)!important;height:auto!important;max-height:100%!important;overflow:visible}
+.bb-order-markers{position:relative;z-index:3;margin-top:calc((100svh - var(--nav-h)) * -1);pointer-events:none}
+.bb-order-markers>ol{margin:0!important}
+.bb-order-markers>ol>li{min-height:72svh!important;border:0!important;padding:0!important;opacity:0}
+.bb-order-markers>ol>li button,.bb-order-markers>ol>li>svg{display:none!important}
+.bb-order-original-stage{display:none!important}
+@media (min-width:1024px){.bb-order-stage{grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:1fr;gap:32px}.bb-order-stage__copy{align-self:center}.bb-order-stage__title{font-size:clamp(44px,4.6vw,72px)}.bb-order-stage__svg{width:min(100%,520px)!important}.bb-order-markers>ol>li{min-height:70svh!important}}
