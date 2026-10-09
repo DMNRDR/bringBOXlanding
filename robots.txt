@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://bringbox.sk/sitemap.xml
+Sitemap: https://dmnrdr.github.io/bringBOXlanding/sitemap.xml
